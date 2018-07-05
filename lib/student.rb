@@ -34,9 +34,9 @@ class Student
       
     else
       sql = "INSERT INTO students (name, album) VALUES (?,?)"
-      
+
       DB[:conn].execute(sql,self.name, self.grade)
-      
+
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students").first.first
     end
   end
@@ -46,5 +46,7 @@ class Student
     student.save
     student
   end
+
+  
 
 end

@@ -33,7 +33,7 @@ class Student
       self.update
 
     else
-      sql = "INSERT INTO students (name, album) VALUES (?,?)"
+      sql = "INSERT INTO students (name, grade) VALUES (?,?)"
 
       DB[:conn].execute(sql,self.name, self.grade)
 
@@ -47,6 +47,6 @@ class Student
     student
   end
 
-  
+
 
 end

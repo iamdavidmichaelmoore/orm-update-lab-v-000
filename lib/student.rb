@@ -31,6 +31,7 @@ class Student
   def save
     if self.id
       self.update
+      
     else
       sql = "INSERT INTO students (name, album) VALUES (?,?)"
       
